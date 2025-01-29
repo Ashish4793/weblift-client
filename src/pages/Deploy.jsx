@@ -45,7 +45,7 @@ function Deploy() {
 
     try {
       const response = await fetch(
-        `http://localhost:9000/api/v2/status?instanceID=${responseData.data.instance_ID}`
+        `https://weblift-api-server.onrender.com/api/v2/status?instanceID=${responseData.data.instance_ID}`
       );
       if (!response.ok) throw new Error("Failed to fetch project status");
 
@@ -129,7 +129,7 @@ function Deploy() {
     };
 
     try {
-      const response = await fetch("http://localhost:9000/api/v2/deploy", {
+      const response = await fetch("https://weblift-api-server.onrender.com/api/v2/deploy", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
