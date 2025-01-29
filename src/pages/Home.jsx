@@ -1,9 +1,11 @@
 import Navbar from "../Navbar";
+import Banner from '../Banner';
 
 
 export default function Home() {
     return(
         <div className="bg-black h-screen">
+          <Banner />
             <Navbar/>
 <div className="bg-black">
   <div className="max-w-5xl mx-auto px-4 xl:px-0 pt-24 lg:pt-32 pb-24">

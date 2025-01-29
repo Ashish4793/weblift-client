@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -18,7 +17,7 @@ const Navbar = () => {
               href="/"
               aria-label="Preline"
             >
-              WebLift
+              🚀 WebLift
             </a>
           </div>
           {/* End Logo */}
@@ -63,6 +62,7 @@ const Navbar = () => {
         </div>
       </nav>
     </header>
+    
   );
 };
 

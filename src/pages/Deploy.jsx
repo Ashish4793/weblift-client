@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import Confetti from "react-confetti"; // Assuming you have Confetti installed
 import { useWindowSize } from "react-use"; // To get window size for confetti
 import Navbar from "../Navbar";
-
+import Banner from "../Banner";
 function Deploy() {
   const [gitURL, setGitURL] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
@@ -151,13 +151,15 @@ function Deploy() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black font-jost text-white">
+    <div className="flex items-center justify-center bg-black font-jost text-white">
 
-      <div className="w-full max-w-5xl">
+      <div className="w-full min-h-screen max-w-5xl">
+      <Banner/>
+
       <Navbar/>
 
         {responseData && (
-          <div className="mt-6 bg-zinc-900 p-4 rounded-lg">
+          <div className="mt-48 border border-gray-500 bg-zinc-900  p-4 rounded-lg">
             <h2 className="text-xl font-semibold mb-2">
               🚀 Deployment status...
             </h2>
